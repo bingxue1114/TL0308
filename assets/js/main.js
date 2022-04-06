@@ -26,7 +26,7 @@
     let countdown = select('.countdown');
 
     const countDownDate = function() {
-        let timeleft = new Date(new Date().getTime() - countdown.getAttribute('data-count')).getTime();
+        let timeleft = new Date(countdown.getAttribute('data-count')).getTime() - new Date().geimetT();
 
         let weeks = Math.floor(timeleft / (1000 * 60 * 60 * 24 * 7));
         let days = Math.floor(timeleft / (1000 * 60 * 60 * 24 * -1));
