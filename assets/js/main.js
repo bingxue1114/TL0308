@@ -1,44 +1,31 @@
-/**
- * Template Name: WeBuild - v4.6.1
- * Template URL: https://bootstrapmade.com/free-bootstrap-coming-soon-template-countdwon/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
-(function() {
-    "use strict";
-
-    /**
-     * Easy selector helper function
-     */
-    const select = (el, all = false) => {
-        el = el.trim()
-        if (all) {
-            return [...document.querySelectorAll(el)]
-        } else {
-            return document.querySelector(el)
-        }
+function HowLongSince(startyear, startmonth, startdate) {
+    var DaysInMonth = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+    var today = new Date()
+    var thisyear = today.getFullYear();
+    var thismonth = today.getMonth();
+    var thisdate = today.getDate();
+    mstart = new Date(startyear, startmonth, 1);
+    mend = new Date(thisyear, thismonth, 1);
+    ydiff = thisyear - mstart.getFullYear();
+    mdiff = thismonth - mstart.getMonth();
+    days1 = (mstart - new Date(startyear, startmonth - 1, startdate)) / (24 * 60 * 60 * 1000) - 1;
+    days2 = (new Date(thisyear, thismonth, thisdate) - mend) / (24 * 60 * 60 * 1000) + 1;
+    dayst = days1 + days2;
+    if (dayst >= DaysInMonth[startmonth - 1]) {
+        mdiff += 1;
+        dayst -= DaysInMonth[startmonth - 1];
     }
-
-    /**
-     * Countdown timer
-     */
-
-    let countdown = select('.countdown');
-
-    const countDownDate = function() {
-        let timeleft = new Date(new Date().getTime() - countdown.getAttribute('data-count')).getTime();
-
-        let weeks = Math.floor(timeleft / (1000 * 60 * 60 * 24 * 7));
-        let days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-
-        let output = countdown.getAttribute('data-template');
-        output = output.replace('%w', weeks).replace('%d', days).replace('%h', hours).replace('%m', minutes).replace('%s', seconds);
-        countdown.innerHTML = output;
+    if (ydiff == 0 && mdiff == 0 && dayst == 0)
+        message = "今天";
+    else {
+        if (mdiff > 11) { mdiff = 0;
+            ydiff++; }
+        if (mdiff < 0) { mdiff = mdiff + 12;
+            ydiff--; }
+        message = (ydiff != 0 ? ydiff + " 年" : "");
+        message += (mdiff != 0 ? " " + mdiff + " 個月" : "");
+        if (ydiff != 0 && mdiff != 0) message += "又";
+        message += (dayst != 0 ? " " + dayst + " 天" : "");
     }
-    countDownDate();
-    setInterval(countDownDate, 1000);
-
-})()
+    return message;
+}
