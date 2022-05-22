@@ -42,3 +42,12 @@
     setInterval(countDownDate, 1000);
 
 })()
+
+
+/**
+ * oldForm alert
+ */
+function finishalert() {
+    alert("填寫成功，歡迎繼續新增~");
+    document.getElementById("oldForm").reset();
+}
