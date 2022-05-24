@@ -57,9 +57,9 @@
 
 
 
-    <div class="container ">
-        <div class="row ptb-60">
-            <div class="col-xs-12 col-sm-6 mr-5 d-none d-xl-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 mr-5 ptb-60 d-none d-xl-block ">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -80,11 +80,11 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-6 mr-5 d-block d-sm-none">
-                <div id="muteYouTubeVideoPlayer" height="100%" width="100%"></div>
+            <div class="col-xs-12 col-sm-6 mr-5 ptb-10 d-block d-sm-none">
+                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/Y0X3sxiNl-c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-sm-6 ptb-60">
                 <h2 class="mt-10 center">"憶"起回憶</h2>
                 <p class="center">相愛是兩個人的事情，在往後的日子，想邀請妳一起與我共同完成我們的回憶紀錄。</p>
 
@@ -190,37 +190,6 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
-
-
-    <!-- YT video -->
-    <script async src="https://youtu.be/Y0X3sxiNl-c"></script>
-    <script>
-        function onYouTubeIframeAPIReady() {
-            var player;
-            player = new YT.Player('muteYouTubeVideoPlayer', {
-                videoId: 'Y0X3sxiNl-c', // YouTube 影片ID
-                //width: 560, // 播放器寬度 (px)
-                //height: 316, // 播放器高度 (px)
-                playerVars: {
-                    autoplay: 1, // 在讀取時自動播放影片
-                    controls: 1, // 在播放器顯示暫停／播放按鈕
-                    showinfo: 0, // 隱藏影片標題
-                    modestbranding: 1, // 隱藏YouTube Logo
-                    loop: 1, // 讓影片循環播放
-                    fs: 0, // 隱藏全螢幕按鈕
-                    cc_load_policty: 0, // 隱藏字幕
-                    iv_load_policy: 3, // 隱藏影片註解
-                    autohide: 0 // 當播放影片時隱藏影片控制列
-                },
-                events: {
-                    onReady: function(e) {
-                        e.target.mute();
-                    }
-                }
-            });
-        }
-    </script>
 
 </body>
 
