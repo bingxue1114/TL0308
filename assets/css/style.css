@@ -470,21 +470,21 @@ section {
 }
 
 @media only screen and (min-width: 769px) {
-    .ptb-60 {
+    .ptb {
         padding-top: 60px;
         padding-bottom: 60px;
     }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 768px) {
-    .ptb-10 {
+    .ptb {
         padding-top: 10px;
         padding-bottom: 10px;
     }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 320px) {
-    .ptb-10 {
+    .ptb {
         padding-top: 10px;
         padding-bottom: 10px;
     }
