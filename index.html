@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+    <link href="assets\img\icon.png" rel="shortcut icon" />
     <title>Our Love Diary</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -38,7 +38,7 @@
         <div class="container-fluid d-flex justify-content-between align-items-center">
 
             <div class="logo">
-                <h1 class="text-light"><a href="index.html"><span>Our Love Diary</span></a></h1>
+                <h1 class="text-light"><img src="assets\img\title-icon.png"><a href="index.html"><span>Our Love Diary</span></a></h1>
             </div>
 
         </div>
@@ -57,9 +57,9 @@
 
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
+    <div class="container ">
+        <div class="row ptb-60">
+            <div class="col-xs-12 col-sm-6 mr-5">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -68,70 +68,60 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="assets\img\hero-bg.png" height="465px">
+                            <img src="assets\img\cl-01.jpg" height="465px" width="100%">
                         </div>
                         <div class="carousel-item">
-                            <img src="assets\img\hero-bg.png" height="465px">
+                            <img src="assets\img\cl-02.jpg" height="465px" width="100%">
                         </div>
                         <div class="carousel-item">
-                            <img src="assets\img\hero-bg.png" height="465px">
+                            <img src="assets\img\cl-03.jpg" height="465px" width="100%">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
 
+                </div>
             </div>
+
             <div class="col-xs-12 col-sm-6">
+                <h2 class="mt-10 center">"憶"起回憶</h2>
+                <p class="center">相愛是兩個人的事情，在往後的日子，想邀請妳一起與我共同完成我們的回憶紀錄。</p>
 
-                <div class="col-xs-12 col-sm-3"></div>
-                <div class="col-xs-12 col-sm-6">
-                    <h2 class="mt-10 center">"憶"起回憶</h2>
-                    <p class="center">相愛是兩個人的事情，在往後的日子，想邀請妳一起與我共同完成我們的回憶紀錄。</p>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){finishalert()}"></iframe>
 
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){finishalert()}"></iframe>
+                <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSejHHGj_Fv7XOni3EdbxqoxjbY1u8kKl8TZAqLaaGcJO9RdBg/formResponse" method="post" target="hidden_iframe" id="oldForm" class="row g-3">
+                    <div class="col-md-2">
+                        <label for="name" class="form-label">事件名稱</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" id="name" name="entry.1216058732" required>
+                    </div>
 
-                    <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSejHHGj_Fv7XOni3EdbxqoxjbY1u8kKl8TZAqLaaGcJO9RdBg/formResponse" method="post" target="hidden_iframe" id="oldForm" class="row g-3">
-                        <div class="col-md-2">
-                            <label for="name" class="form-label">事件名稱</label>
-                        </div>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="name" name="entry.1216058732" required>
-                        </div>
+                    <div class="col-md-2">
+                        <label for="date" class="form-label">發生時間</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="date" class="form-control" id="date" name="entry.1058989308" required>
+                    </div>
 
-                        <div class="col-md-2">
-                            <label for="date" class="form-label">發生時間</label>
-                        </div>
-                        <div class="col-md-10">
-                            <input type="date" class="form-control" id="date" name="entry.1058989308" required>
-                        </div>
+                    <div class="col-md-2">
+                        <label for="location" class="form-label">發生地點</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" id="location" name="entry.1096800424" required>
+                    </div>
 
-                        <div class="col-md-2">
-                            <label for="location" class="form-label">發生地點</label>
-                        </div>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="location" name="entry.1096800424" required>
-                        </div>
+                    <div class="col-md-2">
+                        <label for="process" class="form-label">事件經過</label>
+                    </div>
+                    <div class="col-md-10">
+                        <textarea type="text" class="form-control" id="process" name="entry.1978405416" rows="5" required></textarea>
+                    </div>
 
-                        <div class="col-md-2">
-                            <label for="process" class="form-label">事件經過</label>
-                        </div>
-                        <div class="col-md-10">
-                            <textarea type="text" class="form-control" id="process" name="entry.1978405416" required></textarea>
-                        </div>
+                    <div class="col-6 mx-auto d-grid mb-10">
+                        <button class="btn btn-outline-primary" type="submit">送出</button>
+                    </div>
+                </form>
 
-                        <div class="col-6 mx-auto d-grid mb-10">
-                            <button class="btn btn-primary" type="submit">送出</button>
-                        </div>
-                    </form>
 
-                </div>
 
 
             </div>
@@ -141,10 +131,7 @@
     <!--Container -->
 
 
-    </div>
-    <!-- Row -->
-    </div>
-    <!--Container -->
+
 
 
 
