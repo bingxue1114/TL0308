@@ -469,21 +469,21 @@ section {
     text-align: center;
 }
 
-@media only screen and (min-width: 769px) {
+@media (min-width: 769px) {
     .ptb {
         padding-top: 60px;
         padding-bottom: 60px;
     }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 321px) and (max-width: 768px) {
     .ptb {
         padding-top: 10px;
         padding-bottom: 10px;
     }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 320px) {
     .ptb {
         padding-top: 10px;
         padding-bottom: 10px;
